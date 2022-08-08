@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="forhover.css">
+
+    <script src="https://unpkg.com/phosphor-icons"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body style="display: flex; justify-content: space-between; background-color: rgb(241, 241, 241);" >
+    <div class="leftbar" style="display: flex; flex-direction: column; width: 18vw; height: 100vh; box-shadow:  rgba(200, 200, 200, 0.575) 0px 10px 30px 0px; background-color: white; position: fixed;"  >
+        <div style="display: flex; align-items: center; justify-content: center;">
+            <i style="font-size: 40px; margin-right: 5px;" class="ph-code-bold"></i>
+            <h1 style="font-size: 20px; font-weight: 600; text-align: center; margin: 20px 0px;">CODESET</h1>
+        </div>
+        <a href="dashboard.html"><div style="display: flex; align-items: center; background-color: white; color: black; border-top: 1px solid rgb(222, 222, 222);">
+            <i style="font-size: 25px;padding: 5px 5px; margin: 0px 10px 0px 0px;" class="ph-circles-four-bold"></i>
+            <h2 style="font-size: 15px; font-weight: 600;">Trang chủ</h2>
+        </div></a>
+        <a href="profile.html"><div style="display: flex; align-items: center; background-color: white; color: black; border-top: 1px solid rgb(222, 222, 222); background-color: rgb(0, 135, 255); color: white;">
+            <i style="font-size: 25px;padding: 5px 5px; margin: 0px 10px 0px 0px;" class="ph-user-bold"></i>
+            <h2 style="font-size: 15px; font-weight: 600;">Hồ sơ</h2>
+        </div></a>
+        <a href="courses.html"><div style="display: flex; align-items: center; background-color: white; color: black; border-top: 1px solid rgb(222, 222, 222);;">
+            <i style="font-size: 25px;padding: 5px 5px; margin: 0px 10px 0px 0px;" class="ph-bookmark-bold"></i>
+            <h2 style="font-size: 15px; font-weight: 600;">Khóa học</h2>
+        </div></a>
+        <a href="progress.html"><div style="display: flex; align-items: center; background-color: white; color: black; border-top: 1px solid rgb(222, 222, 222);;">
+            <i style="font-size: 25px;padding: 5px 5px; margin: 0px 10px 0px 0px;" class="ph-chart-bar-bold"></i>
+            <h2 style="font-size: 15px; font-weight: 600;">Tiến trình</h2>
+        </div></a>
+        <a href="forum.html"><div style="display: flex; align-items: center; background-color: white; color: black; border-top: 1px solid rgb(222, 222, 222);;">
+            <i style="font-size: 25px;padding: 5px 5px; margin: 0px 10px 0px 0px;" class="ph-airplay-bold"></i>
+            <h2 style="font-size: 15px; font-weight: 600;">Diễn đàn</h2>
+        </div></a>
+        <a href="message.html"><div style="display: flex; align-items: center; background-color: white; color: black; border-top: 1px solid rgb(222, 222, 222);border-bottom: 1px solid rgb(222, 222, 222);">
+            <i style="font-size: 25px;padding: 5px 5px; margin: 0px 10px 0px 0px;" class="ph-chats-bold"></i>
+            <h2 style="font-size: 15px; font-weight: 600;">Nhắn tin</h2>
+        </div></a>
+        <div style="display: flex; align-items: center; height: 100%;">
+            <div style="display: flex; flex-direction: column; align-items: center; border: 2px solid rgb(225, 225, 225); border-radius: 15px; margin: 20px 30px; justify-content: center; position: relative; height: fit-content;">
+                <i style="padding: 10px; font-size: 40px; background-color: rgba(0, 136, 255, 0.6); position: absolute; border-radius: 10px; top: -20%;" class="ph-users-three-bold"></i>
+                <h2 style="font-size: 20px; font-weight: 600; text-align: center; margin: 50px 40px 0px 40px;" >Nền tảng mạng xã hội</h2>
+                <h2 style="font-size: 10px; text-align: center; margin: 30px;">Trở thành một thành viên của cộng đồng <strong style="font-weight: 600;">Codeset</strong> và trải nghiệm</h2>
+            </div>
+        </div>
+        <a href="index.html"><div style="display: flex; align-items: center; background-color: white; position: absolute; bottom: 0; color: black;">
+            <i style="font-size: 25px;padding: 5px 5px; margin: 0px 10px 0px 0px;" class="ph-sign-out-bold"></i>
+            <h2 style="font-size: 15px; font-weight: 600;">Đăng xuất</h2>
+        </div></a>
+    </div>
+    <div style="display: flex; flex-direction: column;">
+        <div style="display: flex; flex-direction: row; align-items: center; width: 80vw; height: 10vh;  justify-content: space-around; position: fixed; right: 1vw;">
+            <div style="display: flex; align-items: center; background-color: white; border-radius: 10px; width: 30vw; padding: 5px 10px; margin: 5px 10px; margin-left: 10px; box-shadow: rgba(100, 100, 100, 0.3) 0px 3px 9px 0px; ">
+                <i style="font-size: 25px; margin-right: 10px;" class="ph-magnifying-glass"></i>
+                <input style="font-size: 15px; padding: 5px 10px; color: rgb(200, 200, 200); width: 100%; border: none; outline: none;" placeholder="Tìm kiếm">
+            </div>
+            <a href="blocksketch.html"><div style="background-color: white; padding: 10px 15px; border-radius: 15px; background-color: rgb(0, 135, 255); color: white; margin: 5px 10px; margin-right: 20px; box-shadow: rgba(100, 100, 100, 0.3) 0px 3px 9px 0px; display: flex; align-items: center;">
+                <i style="font-size: 15px; margin-right: 5px ;" class="ph-cube-bold"></i>
+                <h2 style="font-size: 15px; font-weight: 600;">Block sketch</h2>
+            </div></a>
+            <i style="font-size: 18px; background-color: white; border-radius: 15px; padding: 10px; margin: 5px 10px; box-shadow: rgba(100, 100, 100, 0.3) 0px 3px 9px 0px;" class="ph-chat-circle"></i>
+            <i style="font-size: 18px; background-color: white; border-radius: 15px; padding: 10px; margin: 5px 10px; box-shadow: rgba(100, 100, 100, 0.3) 0px 3px 9px 0px;" class="ph-airplay"></i>
+            <i style="font-size: 18px; background-color: white; border-radius: 15px; padding: 10px; margin: 5px 10px; box-shadow: rgba(100, 100, 100, 0.3) 0px 3px 9px 0px;" class="ph-bell-ringing"></i>
+            <div style=" display: flex; justify-content: center; align-items: center; padding: 7px; border-radius: 15px; background-color: white; margin: 5px 10px; box-shadow: rgba(100, 100, 100, 0.3) 0px 3px 9px 0px;">
+                <div style="width: 25px; height: 25px; background-color: rgb(0, 135, 255); border-radius: 500px;">
+                    <img src="assets/img/user.svg" alt="" height="100%" width="100%" style="border-radius: 500px; border: 1px solid rgb(0, 135, 255);">
+                </div>
+                <h2 style="font-size: 15px; font-weight: 600; padding: 5px; ">HZeroG</h2>
+            </div>
+            <div style="width: 17%; background-color: white; border-radius: 15px; padding: 12px; box-shadow: rgba(100, 100, 100, 0.3) 0px 3px 9px 0px; margin: 5px 0px;">
+                <h2 style="font-size: 15px; font-weight: 600; text-align: center;">Fri, 28 - 7 - 2022</h2>
+            </div>
+        </div>
+        <div style="width: 80vw; height: 10vh;"></div>
+        <div style="display: flex; align-items: center;">
+            <div style="width: 47vw; height: 90vh; margin-top: 20px; margin-left: 20vw;">
+                <div style="display: flex; text-align: center; background-color: white; justify-content: space-around; padding: 20px; padding-bottom: 80px; border-radius: 10px; box-shadow: rgba(0, 128, 128, 0.15) 3px 3px 6px 3px;">
+                    <h2 style="color: rgb(0, 135, 255); font-size: 15px; font-weight: 600;">Tag <span style="color: rgb(0, 135, 255); background-color: rgba(0, 128, 128, 0.15); border-radius: 3px;">/tag</span></h2>
+                    <h2 style="color: rgb(0, 135, 255); font-size: 15px; font-weight: 600;">Time <span style="color: rgb(0, 135, 255); background-color: rgba(0, 128, 128, 0.15); border-radius: 3px;">/time</span></h2>
+                    <h2 style="color: rgb(0, 135, 255); font-size: 15px; font-weight: 600;">Owner <span style="color: rgb(0, 135, 255); background-color: rgba(0, 128, 128, 0.15); border-radius: 3px;">/owner</span></h2>
+                    <h2 style="color: rgb(0, 135, 255); font-size: 15px; font-weight: 600;">Comment <span style="color: rgb(0, 135, 255); background-color: rgba(0, 128, 128, 0.15); border-radius: 3px;">/comt</span></h2>
+                </div>
+                <div style="margin-top: 50px; display: flex; text-align: center; background-color: white; justify-content: space-around; padding: 20px; border-radius: 10px; box-shadow: rgba(0, 128, 128, 0.15) 3px 3px 6px 3px; height: 20vh;">
+                    <img src="assets/img/logouser.svg" width="150px">
+                    <div style="padding-right: 10vw; height: 100%; display: flex; flex-direction: column; justify-content: space-around; align-items: flex-start;">
+                        <h2 style="color: rgb(0, 135, 255); font-size: 15px; font-weight: 600;">Bài đã học:  <span style="color: rgb(0, 135, 255); margin: 0px 0px 0px 10px ; background-color: rgba(0, 128, 128, 0.15); border-radius: 3px;">2</span></h2>
+                        <h2 style="color: rgb(0, 135, 255); font-size: 15px; font-weight: 600;">Thời gian:  <span style="color: rgb(0, 135, 255); margin: 0px 0px 0px 10px ; background-color: rgba(0, 128, 128, 0.15); border-radius: 3px;">4h</span></h2>
+                        <h2 style="color: rgb(0, 135, 255); font-size: 15px; font-weight: 600;">Tiêu đề:  <span style="color: rgb(0, 135, 255); margin: 0px 0px 0px 10px ; background-color: rgba(0, 128, 128, 0.15); border-radius: 3px;">none</span></h2>
+                    </div>
+                    <div style="background-color: black; width: 2px; height: 100%;"></div>
+                    <div style="background-color: white; display: flex; flex-direction: column; align-items: flex-start; justify-content: space-around; border-radius: 15px; width: 30%;">
+                        <div style="display: flex; align-items: center; ">
+                            <div style="width: 40px; height: 40px; background-color: rgb(0, 135, 255); border-radius: 500px;"></div>
+                            <div style="margin: 0px 10px; display: flex; flex-direction: column; align-items: flex-start;">
+                                <h2 style="font-size: 15px; font-weight: 600;" >HZeroG</h2>
+                                <h2 style="font-size: 10px; margin-top: 5px;" >@hzerog@gmail.com</h2>
+                            </div>
+                        </div>
+                        <div style="display: flex; justify-content: space-around;">
+                            <h2 style="color: rgb(0, 135, 255); font-size: 12px; font-weight: 600;">Comment<span style="color: rgb(0, 135, 255); margin-left: 5px; background-color: rgba(0, 128, 128, 0.15); border-radius: 3px;">3</span></h2>
+                            <h2 style="color: rgb(0, 135, 255); font-size: 12px; font-weight: 600; margin-left: 10px;">Bài đăng<span style="color: rgb(0, 135, 255); margin-left: 5px; background-color: rgba(0, 128, 128, 0.15); border-radius: 3px;">0</span></h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="display: flex; align-items: center;">
+                <div style="width: 40vw; height: 90vh; margin-top: 20px;"></div>    
+                <div style="width: 30vw; height: 90vh; position: fixed; right: 1.5vw;">
+                    <div style="height: max-content; width: 100%; background-color: white; padding: 20px; border-radius: 15px;">
+                        <h2 style="font-size: 25px; font-weight: 600;">Tiến trình</h2>
+                        <img src="assets/img/chart.png" alt="" width="100%" style="margin-top: 20px ;">
+                    </div>
+                    <h2 style="font-size: 25px; font-weight: 600; margin: 20px;">Nhóm - group</h2>
+                    <div style="height: max-content; width: 100%; padding: 20px; background-color: white; border-radius: 15px   ;">
+                        <div style="width: 100%; height: max-content; background-color: white; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgb(225, 225, 225); padding-bottom: 20px;">
+                            <div style="display: flex;align-items: center;">
+                                <div style="background-color: rgb(153, 255, 0); height: 50px; width: 50px; border-radius: 5000px;"></div>
+                                <div>
+                                    <h2 style="font-size: 15px; font-weight: 600; margin-left: 8px;">Coderrank</h2>
+                                    <h2 style="font-size: 10px; margin-left: 8px; color: rgb(150, 150, 150);">@coderrank</h2>
+                                </div>
+                            </div>
+                            <div style="display: flex; align-items: center;">
+                                <h2 style="font-size: 10px; font-weight: 600; padding: 5px 15px; border: 1px solid rgb(0, 135, 255); border-radius: 10px; margin: 0px 5px  ">Add</h2>    
+                                <h2 style="font-size: 10px; font-weight: 600; padding: 5px 15px; border: 1px solid rgb(0, 135, 255); border-radius: 10px; margin: 0px 5px  ">Follow</h2>
+                            </div>
+                        </div>
+                        <div style="width: 100%; height: max-content; background-color: white; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgb(225, 225, 225); padding: 20px 0px;">
+                            <div style="display: flex;align-items: center;">
+                                <div style="background-color: rgb(0, 255, 221); height: 50px; width: 50px; border-radius: 5000px;"></div>
+                                <div>
+                                    <h2 style="font-size: 15px; font-weight: 600; margin-left: 8px;">Ggwp</h2>
+                                    <h2 style="font-size: 10px; margin-left: 8px; color: rgb(150, 150, 150);">@ggwp</h2>
+                                </div>
+                            </div>
+                            <div style="display: flex; align-items: center;">
+                                <h2 style="font-size: 10px; font-weight: 600; padding: 5px 15px; border: 1px solid rgb(0, 135, 255); border-radius: 10px; margin: 0px 5px  ">Add</h2>    
+                                <h2 style="font-size: 10px; font-weight: 600; padding: 5px 15px; border: 1px solid rgb(0, 135, 255); border-radius: 10px; margin: 0px 5px  ">Follow</h2>
+                            </div>
+                        </div>
+                        <div style="width: 100%; height: max-content; background-color: white; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgb(225, 225, 225); padding: 20px 0px;">
+                            <div style="display: flex;align-items: center;">
+                                <div style="background-color: rgb(137, 0, 121); height: 50px; width: 50px; border-radius: 5000px;"></div>
+                                <div>
+                                    <h2 style="font-size: 15px; font-weight: 600; margin-left: 8px;">Barrybruits</h2>
+                                    <h2 style="font-size: 10px; margin-left: 8px; color: rgb(150, 150, 150);">@barrybruits</h2>
+                                </div>
+                            </div>
+                            <div style="display: flex; align-items: center;">
+                                <h2 style="font-size: 10px; font-weight: 600; padding: 5px 15px; border: 1px solid rgb(0, 135, 255); border-radius: 10px; margin: 0px 5px  ">Add</h2>    
+                                <h2 style="font-size: 10px; font-weight: 600; padding: 5px 15px; border: 1px solid rgb(0, 135, 255); border-radius: 10px; margin: 0px 5px  ">Follow</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </div>
+</body>
+</html>

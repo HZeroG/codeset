@@ -1,0 +1,8 @@
+.borderbot
+{
+    transition: all 0.2s;
+}
+.borderbot:hover
+{
+    border-bottom: 2px solid black;
+}

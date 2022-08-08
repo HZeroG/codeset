@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Block sketch</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="forhover.css">
+    <script src="https://unpkg.com/phosphor-icons"></script>
+    <script src="https://unpkg.com/akar-icons-fonts"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+    <div style="display: flex; flex-direction: row; background-color: rgb(241, 241, 241);">
+        <div style="display: flex; flex-direction: column; width: 18vw; height: 100vh; box-shadow:  rgba(200, 200, 200, 0.575) 0px 10px 30px 0px; background-color: white;" >
+            
+            <div style="display: flex; align-items: center; justify-content: center;">
+                <i style="font-size: 40px; margin-right: 5px;" class="ph-cube-bold"></i>
+                <h1 style="font-size: 20px; font-weight: 600; text-align: center; margin: 20px 0px;">BLOCK SKETCH</h1>
+            </div>
+            <div style="display: flex; align-items: center; background-color: white; border-top: 1px solid rgb(222, 222, 222);" onclick="turnBasic()">
+                <div style="width: 10px; height: 100%; background-color: rgb(0, 135, 255);"></div>
+                <i style="font-size: 25px;padding: 5px 5px; margin: 0px 10px 0px 0px;" class="ph-command-bold"></i>
+                <h2 style="font-size: 15px; font-weight: 600;">Basic - Cơ bản</h2>
+            </div>
+            <div style="display: flex; align-items: center; background-color: white; border-top: 1px solid rgb(222, 222, 222);" onclick="turnIfelse()">
+                <div style="width: 10px; height: 100%; background-color: rgb(0, 180, 180);"></div>
+                <i style="font-size: 25px;padding: 5px 5px; margin: 0px 10px 0px 0px;" class="ph-shuffle-bold"></i>
+                <h2 style="font-size: 15px; font-weight: 600;">If else - Điều kiện</h2>
+            </div>
+            <div style="display: flex; align-items: center; background-color: white; border-top: 1px solid rgb(222, 222, 222);" onclick="turnLoops()">
+                <div style="width: 10px; height: 100%; background-color: rgb(0, 210, 55);"></div>
+                <i style="font-size: 25px;padding: 5px 5px; margin: 0px 10px 0px 0px;" class="ph-repeat-bold"></i>
+                <h2 style="font-size: 15px; font-weight: 600;">Loops - Vòng Lặp</h2>
+            </div>
+            <div style="display: flex; align-items: center; background-color: white; border-top: 1px solid rgb(222, 222, 222);" onclick="turnVar()">
+                <div style="width: 10px; height: 100%; background-color: rgb(255, 0, 255);"></div>
+                <i style="font-size: 25px;padding: 5px 5px; margin: 0px 10px 0px 0px;" class="ph-list-bold"></i>
+                <h2 style="font-size: 15px; font-weight: 600;">Variable - Biến</h2>
+            </div>
+            <div style="display: flex; align-items: center; background-color: white; border-top: 1px solid rgb(222, 222, 222);" onclick="turnMathc()">
+                <div style="width: 10px; height: 100%; background-color: rgb(135, 0, 255);"></div>
+                <i style="font-size: 25px;padding: 5px 5px; margin: 0px 10px 0px 0px;" class="ph-calculator-bold"></i>
+                <h2 style="font-size: 15px; font-weight: 600;">Math - Tính toán</h2>
+            </div>
+            <div style="display: flex; align-items: center; background-color: white; border-top: 1px solid rgb(222, 222, 222); border-bottom: 1px solid rgb(222, 222, 222);; justify-content: center;" onclick="hideAll()">
+                <i style="font-size: 25px;padding: 5px 5px; margin: 0px 10px 0px 0px;" class="ph-caret-down-bold"></i>
+            </div>
+        </div>
+        <div>
+            <div style="display: flex; flex-direction: row; align-items: center; width: 80vw; height: 10vh;  justify-content: space-around;">
+                <div style="display: flex; align-items: center; background-color: white; border-radius: 10px; width: 29vw; padding: 5px 10px; margin: 5px 10px; margin-left: 30px; box-shadow: rgba(100, 100, 100, 0.3) 0px 3px 9px 0px;">
+                    <i style="font-size: 25px; margin-right: 10px;" class="ph-magnifying-glass"></i>
+                    <input style="font-size: 15px; padding: 5px 10px; color: rgb(200, 200, 200); width: 100%; border: none; outline: none;" placeholder="Tìm kiếm">
+                </div>
+                <a href="dashboard.html"><div style="background-color: white; padding: 10px 15px; border-radius: 15px; background-color: rgb(0, 0, 0); color: white; margin: 5px 10px; margin-right: 20px; box-shadow: rgba(100, 100, 100, 0.3) 0px 3px 9px 0px; display: flex; align-items: center;">
+                    <i style="font-size: 15px; margin-right: 5px ;" class="ph-cube-bold"></i>
+                    <h2 style="font-size: 15px; font-weight: 600;">Block sketch</h2>
+
+                </div></a>
+                <i style="font-size: 18px; background-color: white; border-radius: 15px; padding: 10px; margin: 5px 10px; box-shadow: rgba(100, 100, 100, 0.3) 0px 3px 9px 0px;" class="ph-chat-circle"></i>
+                <i style="font-size: 18px; background-color: white; border-radius: 15px; padding: 10px; margin: 5px 10px; box-shadow: rgba(100, 100, 100, 0.3) 0px 3px 9px 0px;" class="ph-airplay"></i>
+                <i style="font-size: 18px; background-color: white; border-radius: 15px; padding: 10px; margin: 5px 10px; box-shadow: rgba(100, 100, 100, 0.3) 0px 3px 9px 0px;" class="ph-bell-ringing"></i>
+                <div style=" display: flex; justify-content: center; align-items: center; padding: 7px; border-radius: 15px; background-color: white; margin: 5px 10px; box-shadow: rgba(100, 100, 100, 0.3) 0px 3px 9px 0px;">
+                    <div style="width: 25px; height: 25px; background-color: rgb(0, 135, 255); border-radius: 500px;">
+                        <img src="assets/img/user.svg" alt="" height="100%" width="100%" style="border-radius: 500px; border: 1px solid rgb(0, 135, 255);">
+                    </div>
+                    <h2 style="font-size: 15px; font-weight: 600; padding: 5px; ">HZeroG</h2>
+                </div>
+                <div style="width: 17%; background-color: white; border-radius: 15px; padding: 12px; box-shadow: rgba(100, 100, 100, 0.3) 0px 3px 9px 0px;">
+                    <h2 style="font-size: 15px; font-weight: 600; text-align: center;">Fri, 28 - 7 - 2022</h2>
+                </div>
+            </div>
+            <div id="funcbasic" style="position: fixed; visibility: hidden;">
+                <div style="display: flex; flex-direction: column; width: 18vw; height: fit-content; border-radius: 5px; background-color: rgb(100, 100, 100); padding: 10px 0px; padding-bottom: 20px; ">
+                    <div style="display: flex; align-items: center; margin: 10px 10px; align-self: start;">
+                        <i style="font-size: 25px; color: rgb(0, 135, 255); margin-right: 3px;" class="ph-command-bold"></i>
+                        <h2 style="color: white; font-weight: 600; font-size: 20px;">Basic</h2>
+                    </div>
+                    <div style="margin: 10px;">
+                        <div style="background-color: rgb(0, 135, 255); width: max-content; height: fit-content; display: flex; padding: 5px 10px ; justify-content: space-between; border-radius: 5px; box-shadow: rgba(175, 175, 175, 0.5) 2px 2px 5px 2px; " draggable="true" ondragstart="drag(event)" id="drag28">
+                            <h2 style="font-weight: 600; font-size: 15px; color: white;">hiển thị số</h2> 
+                            <div style="background-color: white; padding: 0px 10px ; margin-left: 20px; border-radius: 10px; border: 1px solid rgb(100, 100, 100);">
+                                <input style="font-size: 15px; border: none; outline: none; width: 10px;" placeholder="0">
+                            </div>
+                        </div>
+                    </div>
+                    <div style="margin: 10px;">
+                        <div style="background-color: rgb(0, 135, 255); width: max-content; height: fit-content; display: flex; padding: 5px 10px ; justify-content: space-between; border-radius: 5px; box-shadow: rgba(175, 175, 175, 0.5) 2px 2px 5px 2px;" draggable="true" ondragstart="drag(event)" id="drag27">
+                            <h2 style="font-weight: 600; font-size: 15px; color: white;">hiển thị xâu</h2> 
+                            <div style="background-color: white; padding: 0px 10px ; margin-left: 20px; border-radius: 10px; border: 1px solid rgb(100, 100, 100);">
+                                <input style="font-size: 15px; border: none; outline: none; width: 10px;" placeholder="' '">
+                            </div>
+                        </div>
+                    </div>
+                    <div style="margin: 10px;">
+                        <div style="background-color: rgb(0, 135, 255); width: max-content; height: fit-content; display: flex; padding: 5px 10px ; justify-content: space-between; border-radius: 5px; box-shadow: rgba(175, 175, 175, 0.5) 2px 2px 5px 2px;" draggable="true" ondragstart="drag(event)" id="drag26">
+                            <h2 style="font-weight: 600; font-size: 15px; color: white;">xóa màn hình</h2> 
+                        </div>
+                    </div>
+                    <div style="margin: 10px;">
+                        <div style="background-color: rgb(0, 135, 255); width: max-content; height: fit-content; padding: 5px 10px ; display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start; border-radius: 5px; box-shadow: rgba(175, 175, 175, 0.5) 2px 2px 5px 2px;" draggable="true" ondragstart="drag(event)" id="drag25">
+                            <h2 style="font-weight: 600; font-size: 15px; color: white;">bắt đầu</h2>
+                            <div style="width: 100%; height: fit-content; background-color: rgb(0, 135, 255); margin: 10px 0px ;border-radius: 5px; border: 3px dashed rgb(241, 241, 241); padding: 10px 5px;"></div> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="funcifelse" style="position: fixed; visibility: hidden;">
+                <div style="display: flex; flex-direction: column; width: 18vw; height: fit-content; border-radius: 5px; background-color: rgb(100, 100, 100); padding: 10px 0px; padding-bottom: 20px;">
+                    <div style="display: flex; align-items: center; margin: 10px 10px; align-self: start;">
+                        <i style="font-size: 25px; color: rgb(0, 180, 180); margin-right: 3px;" class="ph-shuffle-bold"></i>
+                        <h2 style="color: white; font-weight: 600; font-size: 20px;">If else</h2>
+                    </div>
+                    <h2 style="color: white; font-size: 15px; margin: 10px;">Điều kiện</h2>
+                    <div style="margin: 10px;">
+                        <div style="background-color: rgb(0, 180, 180); width: fit-content; height: fit-content; padding: 5px 10px ; display: flex; flex-direction: column; justify-content: flex-start; border-radius: 5px; box-shadow: rgba(175, 175, 175, 0.5) 2px 2px 5px 2px;" draggable="true" ondragstart="drag(event)" id="drag24">
+                            <div style="display: flex; justify-content: space-between;">
+                                <h2 style="font-weight: 600; font-size: 15px; color: white;">nếu</h2> 
+                                <div style="background-color: white; padding: 0px 10px ; margin: 0px 20px ; border-radius: 10px; border: 1px solid rgb(100, 100, 100); height: fit-content;">
+                                    <input style="font-size: 15px; border: none; outline: none; width: 10px;" placeholder="0">
+                                </div>
+                                <h2 style="font-weight: 600; font-size: 15px; color: white;">thì</h2>
+                            </div>
+                            <div style="width: 100%; height: fit-content; background-color: rgb(0, 180, 180); margin: 10px 0px ;border-radius: 5px; border: 3px dashed rgb(241, 241, 241); padding: 10px 5px;"></div> 
+                        </div>
+                    </div>
+                    <div style="margin: 10px;">
+                        <div style="background-color: rgb(0, 180, 180); width: fit-content; height: fit-content; padding: 5px 10px ; display: flex; flex-direction: column; justify-content: flex-start; border-radius: 5px; box-shadow: rgba(175, 175, 175, 0.5) 2px 2px 5px 2px;" draggable="true" ondragstart="drag(event)" id="drag1">
+                            <div style="display: flex; justify-content: space-between;">
+                                <h2 style="font-weight: 600; font-size: 15px; color: white;">nếu</h2> 
+                                <div style="background-color: white; padding: 0px 10px ; margin: 0px 20px ; border-radius: 10px; border: 1px solid rgb(100, 100, 100); height: fit-content;">
+                                    <input style="font-size: 15px; border: none; outline: none; width: 10px;" placeholder="0">
+                                </div>
+                                <h2 style="font-weight: 600; font-size: 15px; color: white;">thì</h2>
+                            </div>
+                            <div style="width: 100%; height: fit-content; background-color: rgb(0, 180, 180); margin: 10px 0px ;border-radius: 5px; border: 3px dashed rgb(241, 241, 241); padding: 10px 5px;"></div> 
+                            <h2 style="font-weight: 600; font-size: 15px; color: white;">ngược lại</h2> 
+                            <div style="width: 100%; height: fit-content; background-color: rgb(0, 180, 180); margin: 10px 0px ;border-radius: 5px; border: 3px dashed rgb(241, 241, 241); padding: 10px 5px;"></div> 
+                        </div>
+                    </div>
+                        <h2 style="color: white; font-size: 15px; margin: 10px;">So sánh</h2>
+                    <div style="margin: 10px;">
+                        <div style="background-color: rgb(0, 180, 180); width: fit-content; height: fit-content; padding: 5px 10px ; display: flex; flex-direction: column; justify-content: flex-start; border-radius: 500px; box-shadow: rgba(175, 175, 175, 0.5) 2px 2px 5px 2px;" draggable="true" ondragstart="drag(event)" id="drag2">
+                            <div style="display: flex; justify-content: space-between;">
+                                <div style="background-color: white; padding: 0px 10px ; margin: 0px 10px ; border-radius: 10px; border: 1px solid rgb(100, 100, 100); height: fit-content; width: fit-content;">
+                                    <input style="font-size: 15px; border: none; outline: none; width: 10px;" placeholder="0">
+                                </div>
+                                <div style="background-color: white; padding: 0px 10px ; margin: 0px 10px ; border-radius: 10px; border: 1px solid rgb(100, 100, 100); height: fit-content; width: fit-content;">
+                                    <input style="font-size: 15px; border: none; outline: none; width: 10px;" placeholder="=">
+                                </div>
+                                <div style="background-color: white; padding: 0px 10px ; margin: 0px 10px ; border-radius: 10px; border: 1px solid rgb(100, 100, 100); height: fit-content; width: fit-content;">
+                                    <input style="font-size: 15px; border: none; outline: none; width: 10px;" placeholder="0">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="margin: 10px;">
+                        <div style="background-color: rgb(0, 180, 180); width: fit-content; height: fit-content; padding: 5px 10px ; display: flex; flex-direction: column; justify-content: flex-start; border-radius: 500px; box-shadow: rgba(175, 175, 175, 0.5) 2px 2px 5px 2px;" draggable="true" ondragstart="drag(event)" id="drag3">
+                            <div style="display: flex; justify-content: space-between;">
+                                <div style="background-color: white; padding: 0px 10px ; margin: 0px 10px ; border-radius: 10px; border: 1px solid rgb(100, 100, 100); height: fit-content; width: fit-content;">
+                                    <input style="font-size: 15px; border: none; outline: none; width: 10px;" placeholder="' '">
+                                </div>
+                                <div style="background-color: white; padding: 0px 10px ; margin: 0px 10px ; border-radius: 10px; border: 1px solid rgb(100, 100, 100); height: fit-content; width: fit-content;">
+                                    <input style="font-size: 15px; border: none; outline: none; width: 10px;" placeholder="=">
+                                </div>
+                                <div style="background-color: white; padding: 0px 10px ; margin: 0px 10px ; border-radius: 10px; border: 1px solid rgb(100, 100, 100); height: fit-content; width: fit-content;">
+                                    <input style="font-size: 15px; border: none; outline: none; width: 10px;" placeholder="' '">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="margin: 10px;">
+                        <div style="background-color: rgb(0, 180, 180); width: fit-content; height: fit-content; padding: 5px 10px ; display: flex; flex-direction: column; justify-content: flex-start; border-radius: 500px; box-shadow: rgba(175, 175, 175, 0.5) 2px 2px 5px 2px;" draggable="true" ondragstart="drag(event)" id="drag4">
+                            <div style="display: flex; justify-content: space-between;">
+                                <div style="background-color: white; padding: 0px 10px ; margin: 0px 10px ; border-radius: 10px; border: 1px solid rgb(100, 100, 100); height: fit-content; width: fit-content;">
+                                    <input style="font-size: 15px; border: none; outline: none; width: 10px;" placeholder="0">
+                                </div>
+                                <h2 style="font-weight: 600; font-size: 15px; color: white;">và</h2>
+                                
+                                <div style="background-color: white; padding: 0px 10px ; margin: 0px 10px ; border-radius: 10px; border: 1px solid rgb(100, 100, 100); height: fit-content; width: fit-content;">
+                                    <input style="font-size: 15px; border: none; outline: none; width: 10px;" placeholder="0">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="margin: 10px;">
+                        <div style="background-color: rgb(0, 180, 180); width: fit-content; height: fit-content; padding: 5px 10px ; display: flex; flex-direction: column; justify-content: flex-start; border-radius: 500px; box-shadow: rgba(175, 175, 175, 0.5) 2px 2px 5px 2px;" draggable="true" ondragstart="drag(event)" id="drag5">
+                            <div style="display: flex; justify-content: space-between;">
+                                <div style="background-color: white; padding: 0px 10px ; margin: 0px 10px ; border-radius: 10px; border: 1px solid rgb(100, 100, 100); height: fit-content; width: fit-content;">
+                                    <input style="font-size: 15px; border: none; outline: none; width: 10px;" placeholder="0">
+                                </div>
+                                <h2 style="font-weight: 600; font-size: 15px; color: white;">hoặc</h2>
+                                
+                                <div style="background-color: white; padding: 0px 10px ; margin: 0px 10px ; border-radius: 10px; border: 1px solid rgb(100, 100, 100); height: fit-content; width: fit-content;">
+                                    <input style="font-size: 15px; border: none; outline: none; width: 10px;" placeholder="0">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="margin: 10px;">
+                        <div style="background-color: rgb(0, 180, 180); width: fit-content; height: fit-content; padding: 5px 10px ; display: flex; flex-direction: column; justify-content: flex-start; border-radius: 500px; box-shadow: rgba(175, 175, 175, 0.5) 2px 2px 5px 2px;" draggable="true" ondragstart="drag(event)" id="drag6">
+                            <div style="display: flex; justify-content: space-between;">
+                                <div style="background-color: white; padding: 0px 10px ; margin: 0px 10px ; border-radius: 10px; border: 1px solid rgb(100, 100, 100); height: fit-content; width: fit-content;">
+                                    <input style="font-size: 15px; border: none; outline: none; width: 40px;" placeholder="đúng">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="funcloop" style="position: fixed; visibility: hidden;">
+                <div style="display: flex; flex-direction: column; width: 18vw; height: fit-content; border-radius: 5px; background-color: rgb(100, 100, 100); padding: 10px 0px; padding-bottom: 20px;">
+                    <div style="display: flex; align-items: center; margin: 10px 10px; align-self: start;">
+                        <i style="font-size: 25px; color: rgb(0, 210, 55); margin-right: 3px;" class="ph-repeat-bold"></i>
+                        <h2 style="color: white; font-weight: 600; font-size: 20px;">Loops</h2>
+                    </div>
+                    <div style="margin: 10px;">
+                        <div style="background-color: rgb(0, 210, 55); width: fit-content; height: fit-content; padding: 5px 10px ; display: flex; flex-direction: column; justify-content: flex-start; border-radius: 5px; box-shadow: rgba(175, 175, 175, 0.5) 2px 2px 5px 2px;" draggable="true" ondragstart="drag(event)" id="drag7">
+                            <div style="display: flex; justify-content: space-between;">
+                                <h2 style="font-weight: 600; font-size: 15px; color: white;">lặp lại</h2> 
+                                <div style="background-color: white; padding: 0px 10px ; margin: 0px 20px ; border-radius: 10px; border: 1px solid rgb(100, 100, 100); height: fit-content;">
+                                    <input style="font-size: 15px; border: none; outline: none; width: 10px;" placeholder="0">
+                                </div>
+                                <h2 style="font-weight: 600; font-size: 15px; color: white;">lần</h2>
+                            </div>
+                            <div style="width: 100%; height: fit-content; background-color: rgb(0, 210, 55); margin: 10px 0px ;border-radius: 5px; border: 3px dashed rgb(241, 241, 241); padding: 10px 5px;"></div> 
+                        </div>
+                    </div>
+                    <div style="margin: 10px;">
+                        <div style="background-color: rgb(0, 210, 55); width: fit-content; height: fit-content; padding: 5px 10px ; display: flex; flex-direction: column; justify-content: flex-start; border-radius: 5px; box-shadow: rgba(175, 175, 175, 0.5) 2px 2px 5px 2px;" draggable="true" ondragstart="drag(event)" id="drag8">
+                            <div style="display: flex; justify-content: space-between;">
+                                <h2 style="font-weight: 600; font-size: 15px; color: white;">trong khi</h2> 
+                                <div style="background-color: white; padding: 0px 10px ; margin: 0px 0px 0px 20px ; border-radius: 10px; border: 1px solid rgb(100, 100, 100); height: fit-content;">
+                                    <input style="font-size: 15px; border: none; outline: none; width: 10px;" placeholder="0">
+                                </div>
+                            </div>
+                            <div style="width: 100%; height: fit-content; background-color: rgb(0, 210, 55); margin: 10px 0px ;border-radius: 5px; border: 3px dashed rgb(241, 241, 241); padding: 10px 5px;"></div> 
+                        </div>
+                    </div>
+                    <div style="margin: 10px;">
+                        <div style="background-color: rgb(0, 210, 55); width: fit-content; height: fit-content; padding: 5px 10px ; display: flex; flex-direction: column; justify-content: flex-start; border-radius: 5px; box-shadow: rgba(175, 175, 175, 0.5) 2px 2px 5px 2px;" draggable="true" ondragstart="drag(event)" id="drag9">
+                            <div style="display: flex; justify-content: space-between;">
+                                <h2 style="font-weight: 600; font-size: 15px; color: white;">từ</h2> 
+                                <div style="background-color: white; padding: 0px 10px ; margin: 0px 20px ; border-radius: 10px; border: 1px solid rgb(100, 100, 100); height: fit-content;">
+                                    <input style="font-size: 15px; border: none; outline: none; width: 10px;" placeholder="0">
+                                </div>
+                                <h2 style="font-weight: 600; font-size: 15px; color: white;">đến</h2>
+                                <div style="background-color: white; padding: 0px 10px ; margin: 0px 0px 0px 20px; border-radius: 10px; border: 1px solid rgb(100, 100, 100); height: fit-content;">
+                                    <input style="font-size: 15px; border: none; outline: none; width: 10px;" placeholder="0">
+                                </div>
+                            </div>
+                            <h2 style="font-weight: 600; font-size: 15px; color: white; margin-top: 10px;">thực hiện</h2>
+                            <div style="width: 100%; height: fit-content; background-color: rgb(0, 210, 55); margin: 10px 0px ;border-radius: 5px; border: 3px dashed rgb(241, 241, 241); padding: 10px 5px;"></div> 
+                        </div>
+                    </div>
+                    <div style="margin: 10px;"> 
+                        <div style="background-color: rgb(0, 210, 55); width: fit-content; height: fit-content; padding: 5px 10px ; display: flex; flex-direction: column; justify-content: flex-start; border-radius: 5px; box-shadow: rgba(175, 175, 175, 0.5) 2px 2px 5px 2px;" draggable="true" ondragstart="drag(event)" id="drag10">
+                            <h2 style="font-weight: 600; font-size: 15px; color: white;">hủy</h2>
+                        </div>
+                    </div>
+                    <div style="margin: 10px;">
+                        <div style="background-color: rgb(0, 210, 55); width: fit-content; height: fit-content; padding: 5px 10px ; display: flex; flex-direction: column; justify-content: flex-start; border-radius: 5px; box-shadow: rgba(175, 175, 175, 0.5) 2px 2px 5px 2px;" draggable="true" ondragstart="drag(event)" id="drag11">
+                            <h2 style="font-weight: 600; font-size: 15px; color: white;">tiếp tục</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="funcmath" style="position: fixed; visibility: hidden;">
+                <div style="display: flex; flex-direction: column; width: 18vw; height: fit-content; border-radius: 5px; background-color: rgb(100, 100, 100); padding: 10px 0px; padding-bottom: 20px;">
+                    <div style="display: flex; align-items: center; margin: 10px 10px; align-self: start;">
+                        <i style="font-size: 25px; color: rgb(135, 0, 255); margin-right: 3px;" class="ph-calculator-bold"></i>
+                        <h2 style="color: white; font-weight: 600; font-size: 20px;">Math</h2>
+                    </div>
+                    <div style="margin: 10px;">
+                        <div style="background-color: rgb(135, 0, 255); width: fit-content; height: fit-content; padding: 5px 10px ; display: flex; flex-direction: column; justify-content: flex-start; border-radius: 500px; box-shadow: rgba(175, 175, 175, 0.5) 2px 2px 5px 2px;" draggable="true" ondragstart="drag(event)" id="drag12">
+                            <div style="display: flex; justify-content: space-between;">
+                                <div style="background-color: white; padding: 0px 10px ; margin: 0px 10px 0px 0px ; border-radius: 10px; border: 1px solid rgb(100, 100, 100); height: fit-content; width: fit-content;">
+                                    <input style="font-size: 15px; border: none; outline: none; width: 10px;" placeholder="0">
+                                </div>
+                                <h2 style="font-weight: 600; font-size: 15px; color: white;">+</h2>
+                                <div style="background-color: white; padding: 0px 10px ; margin: 0px 0px 0px 10px ; border-radius: 10px; border: 1px solid rgb(100, 100, 100); height: fit-content; width: fit-content;">
+                                    <input style="font-size: 15px; border: none; outline: none; width: 10px;" placeholder="0">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="margin: 10px;">
+                        <div style="background-color: rgb(135, 0, 255); width: fit-content; height: fit-content; padding: 5px 10px ; display: flex; flex-direction: column; justify-content: flex-start; border-radius: 500px; box-shadow: rgba(175, 175, 175, 0.5) 2px 2px 5px 2px;" draggable="true" ondragstart="drag(event)" id="drag13">
+                            <div style="display: flex; justify-content: space-between;">
+                                <div style="background-color: white; padding: 0px 10px ; margin: 0px 10px 0px 0px ; border-radius: 10px; border: 1px solid rgb(100, 100, 100); height: fit-content; width: fit-content;">
+                                    <input style="font-size: 15px; border: none; outline: none; width: 10px;" placeholder="0">
+                                </div>
+                                <h2 style="font-weight: 600; font-size: 15px; color: white;">-</h2>
+                                <div style="background-color: white; padding: 0px 10px ; margin: 0px 0px 0px 10px ; border-radius: 10px; border: 1px solid rgb(100, 100, 100); height: fit-content; width: fit-content;">
+                                    <input style="font-size: 15px; border: none; outline: none; width: 10px;" placeholder="0">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="margin: 10px;">
+                        <div style="background-color: rgb(135, 0, 255); width: fit-content; height: fit-content; padding: 5px 10px ; display: flex; flex-direction: column; justify-content: flex-start; border-radius: 500px; box-shadow: rgba(175, 175, 175, 0.5) 2px 2px 5px 2px;" draggable="true" ondragstart="drag(event)" id="drag14">
+                            <div style="display: flex; justify-content: space-between;">
+                                <div style="background-color: white; padding: 0px 10px ; margin: 0px 10px 0px 0px ; border-radius: 10px; border: 1px solid rgb(100, 100, 100); height: fit-content; width: fit-content;">
+                                    <input style="font-size: 15px; border: none; outline: none; width: 10px;" placeholder="0">
+                                </div>
+                                <h2 style="font-weight: 600; font-size: 15px; color: white;">x</h2>
+                                <div style="background-color: white; padding: 0px 10px ; margin: 0px 0px 0px 10px ; border-radius: 10px; border: 1px solid rgb(100, 100, 100); height: fit-content; width: fit-content;">
+                                    <input style="font-size: 15px; border: none; outline: none; width: 10px;" placeholder="0">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="margin: 10px;">
+                        <div style="background-color: rgb(135, 0, 255); width: fit-content; height: fit-content; padding: 5px 10px ; display: flex; flex-direction: column; justify-content: flex-start; border-radius: 500px; box-shadow: rgba(175, 175, 175, 0.5) 2px 2px 5px 2px;" draggable="true" ondragstart="drag(event)" id="drag15">
+                            <div style="display: flex; justify-content: space-between;">
+                                <div style="background-color: white; padding: 0px 10px ; margin: 0px 10px 0px 0px ; border-radius: 10px; border: 1px solid rgb(100, 100, 100); height: fit-content; width: fit-content;">
+                                    <input style="font-size: 15px; border: none; outline: none; width: 10px;" placeholder="0">
+                                </div>
+                                <h2 style="font-weight: 600; font-size: 15px; color: white;">:</h2>
+                                <div style="background-color: white; padding: 0px 10px ; margin: 0px 0px 0px 10px ; border-radius: 10px; border: 1px solid rgb(100, 100, 100); height: fit-content; width: fit-content;">
+                                    <input style="font-size: 15px; border: none; outline: none; width: 10px;" placeholder="1">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="margin: 10px;">
+                        <div style="background-color: rgb(135, 0, 255); width: fit-content; height: fit-content; padding: 5px 10px ; display: flex; flex-direction: column; justify-content: flex-start; border-radius: 500px; box-shadow: rgba(175, 175, 175, 0.5) 2px 2px 5px 2px;" draggable="true" ondragstart="drag(event)" id="drag16">
+                            <div style="display: flex; justify-content: space-between;">
+                                <h2 style="font-weight: 600; font-size: 15px; color: white;">lấy dư của</h2>
+                                
+                                <div style="background-color: white; padding: 0px 10px ; margin: 0px 10px ; border-radius: 10px; border: 1px solid rgb(100, 100, 100); height: fit-content; width: fit-content;">
+                                    <input style="font-size: 15px; border: none; outline: none; width: 10px;" placeholder="0">
+                                </div>
+                                <h2 style="font-weight: 600; font-size: 15px; color: white;">:</h2>
+                                <div style="background-color: white; padding: 0px 10px ; margin: 0px 0px 0px 10px ; border-radius: 10px; border: 1px solid rgb(100, 100, 100); height: fit-content; width: fit-content;">
+                                    <input style="font-size: 15px; border: none; outline: none; width: 10px;" placeholder="0">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="margin: 10px;">
+                        <div style="background-color: rgb(135, 0, 255); width: fit-content; height: fit-content; padding: 5px 10px ; display: flex; flex-direction: column; justify-content: flex-start; border-radius: 500px; box-shadow: rgba(175, 175, 175, 0.5) 2px 2px 5px 2px;" draggable="true" ondragstart="drag(event)" id="drag17">
+                            <div style="display: flex; justify-content: space-between;">
+                                <h2 style="font-weight: 600; font-size: 15px; color: white;">giá trị tuyệt đối của</h2>
+                                <div style="background-color: white; padding: 0px 10px ; margin: 0px 0px 0px 10px ; border-radius: 10px; border: 1px solid rgb(100, 100, 100); height: fit-content; width: fit-content;">
+                                    <input style="font-size: 15px; border: none; outline: none; width: 10px;" placeholder="0">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="margin: 10px;">
+                        <div style="background-color: rgb(135, 0, 255); width: fit-content; height: fit-content; padding: 5px 10px ; display: flex; flex-direction: column; justify-content: flex-start; border-radius: 500px; box-shadow: rgba(175, 175, 175, 0.5) 2px 2px 5px 2px;" draggable="true" ondragstart="drag(event)" id="drag18">
+                            <div style="display: flex; justify-content: space-between;">
+                                <h2 style="font-weight: 600; font-size: 15px; color: white;">làm tròn</h2>
+                                <div style="background-color: white; padding: 0px 10px ; margin: 0px 0px 0px 10px ; border-radius: 10px; border: 1px solid rgb(100, 100, 100); height: fit-content; width: fit-content;">
+                                    <input style="font-size: 15px; border: none; outline: none; width: 10px;" placeholder="0">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="margin: 10px;">
+                        <div style="background-color: rgb(135, 0, 255); width: fit-content; height: fit-content; padding: 5px 10px ; display: flex; flex-direction: column; justify-content: flex-start; border-radius: 500px; box-shadow: rgba(175, 175, 175, 0.5) 2px 2px 5px 2px;" draggable="true" ondragstart="drag(event)" id="drag19">
+                            <div style="display: flex; justify-content: space-between;">
+                                <h2 style="font-weight: 600; font-size: 15px; color: white;">ngẫu nhiên</h2>
+                                <div style="background-color: white; padding: 0px 10px ; margin: 0px 10px ; border-radius: 10px; border: 1px solid rgb(100, 100, 100); height: fit-content; width: fit-content;">
+                                    <input style="font-size: 15px; border: none; outline: none; width: 10px;" placeholder="0">
+                                </div>
+                                <h2 style="font-weight: 600; font-size: 15px; color: white;">tới</h2>
+                                <div style="background-color: white; padding: 0px 10px ; margin: 0px 0px 0px 10px ; border-radius: 10px; border: 1px solid rgb(100, 100, 100); height: fit-content; width: fit-content;">
+                                    <input style="font-size: 15px; border: none; outline: none; width: 10px;" placeholder="9">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="funcvar" style="position: fixed; visibility: hidden;">
+                <div style="display: flex; flex-direction: column; width: 18vw; height: fit-content; border-radius: 5px; background-color: rgb(100, 100, 100); padding: 10px 0px; padding-bottom: 20px;">
+                    <div style="display: flex; align-items: center; margin: 10px 10px; align-self: start;">
+                        <i style="font-size: 25px; color: rgb(255, 0, 255);; margin-right: 3px;" class="ph-list-bold"></i>
+                        <h2 style="color: white; font-weight: 600; font-size: 20px;">Variable</h2>
+                    </div>
+                    <div style="margin: 10px;">
+                        <div style="background-color: rgb(255, 0, 255);; width: fit-content; height: fit-content; padding: 5px 10px ; display: flex; flex-direction: column; justify-content: flex-start; border-radius: 500px; box-shadow: rgba(175, 175, 175, 0.5) 2px 2px 5px 2px;" draggable="true" ondragstart="drag(event)" id="drag20">
+                            <div style="display: flex; justify-content: space-between;">
+                                <h2 style="font-weight: 600; font-size: 15px; color: white;">số nguyên</h2>
+                                <div style="background-color: white; padding: 0px 10px ; margin: 0px 0px 0px 10px ; border-radius: 10px; border: 1px solid rgb(100, 100, 100); height: fit-content; width: fit-content;">
+                                    <input style="font-size: 15px; border: none; outline: none; width: 10px;" placeholder="0">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="margin: 10px;">
+                        <div style="background-color: rgb(255, 0, 255);; width: fit-content; height: fit-content; padding: 5px 10px ; display: flex; flex-direction: column; justify-content: flex-start; border-radius: 500px; box-shadow: rgba(175, 175, 175, 0.5) 2px 2px 5px 2px;" draggable="true" ondragstart="drag(event)" id="drag21">
+                            <div style="display: flex; justify-content: space-between;">
+                                <h2 style="font-weight: 600; font-size: 15px; color: white;">số thực</h2>
+                                <div style="background-color: white; padding: 0px 10px ; margin: 0px 0px 0px 10px ; border-radius: 10px; border: 1px solid rgb(100, 100, 100); height: fit-content; width: fit-content;">
+                                    <input style="font-size: 15px; border: none; outline: none; width: 10px;" placeholder="0">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="margin: 10px;">
+                        <div style="background-color: rgb(255, 0, 255);; width: fit-content; height: fit-content; padding: 5px 10px ; display: flex; flex-direction: column; justify-content: flex-start; border-radius: 500px; box-shadow: rgba(175, 175, 175, 0.5) 2px 2px 5px 2px;" draggable="true" ondragstart="drag(event)" id="drag22">
+                            <div style="display: flex; justify-content: space-between;">
+                                <h2 style="font-weight: 600; font-size: 15px; color: white;">xâu</h2>
+                                <div style="background-color: white; padding: 0px 10px ; margin: 0px 0px 0px 10px ; border-radius: 10px; border: 1px solid rgb(100, 100, 100); height: fit-content; width: fit-content;">
+                                    <input style="font-size: 15px; border: none; outline: none; width: 10px;" placeholder="' '">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="margin: 10px;">
+                        <div style="background-color: rgb(255, 0, 255);; width: fit-content; height: fit-content; padding: 5px 10px ; display: flex; flex-direction: column; justify-content: flex-start; border-radius: 500px; box-shadow: rgba(175, 175, 175, 0.5) 2px 2px 5px 2px;" draggable="true" ondragstart="drag(event)" id="drag23">
+                            <div style="display: flex; justify-content: space-between;">
+                                <h2 style="font-weight: 600; font-size: 15px; color: white;">bool</h2>
+                                <div style="background-color: white; padding: 0px 10px ; margin: 0px 0px 0px 10px ; border-radius: 10px; border: 1px solid rgb(100, 100, 100); height: fit-content; width: fit-content;">
+                                    <input style="font-size: 15px; border: none; outline: none; width: 40px;" placeholder="đúng">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="height: 90vh; width: 50vw; display: flex; align-items: center; justify-content: center; flex-direction: column;" ondrop="drop(event)" ondragover="allowDrop(event)">
+            </div>
+            <div style="padding: 5px; background-color: rgb(0, 135, 255); width: fit-content; height: fit-content; border-radius: 5px; position: absolute; bottom: 10px; right: 31%;">
+                <h2 style="font-size: 15px; padding: 5px 10px; font-weight: 600; color: white;">Run</h2>
+            </div>
+            <div style="position: absolute; width: 30vw; height: 85vh; background-color: white; border: 1px solid rgb(225, 225, 225); bottom: 10px; right: 10px; border-radius: 5px; padding: 5px;">
+                <p style="font-size: 15;"></p>
+            </div>
+        </div>
+    </div>
+    <script>
+        function allowDrop(ev) {
+          ev.preventDefault();
+        }
+        
+        function drag(ev) {
+          ev.dataTransfer.setData("text", ev.target.id);
+        }
+ 
+        function drop(ev) {
+          ev.preventDefault();
+          var data = ev.dataTransfer.getData("text");
+          ev.target.appendChild(document.getElementById(data));
+        }
+        var basic = document.getElementById('funcbasic');
+        var ifelse = document.getElementById('funcifelse');
+        var loop = document.getElementById('funcloop');
+        var math = document.getElementById('funcmath');
+        var vari = document.getElementById('funcvar');        
+        function turnBasic()
+        {
+            basic.style.visibility = "visible";
+            ifelse.style.visibility = "hidden";
+            loop.style.visibility = "hidden";
+            math.style.visibility = "hidden";
+            vari.style.visibility = "hidden";
+        }
+        function turnIfelse()
+        {
+            basic.style.visibility = "hidden";
+            ifelse.style.visibility = "visible";
+            loop.style.visibility = "hidden";
+            math.style.visibility = "hidden";
+            vari.style.visibility = "hidden";
+        }
+        function turnLoops()
+        {
+            basic.style.visibility = "hidden";
+            ifelse.style.visibility = "hidden";
+            loop.style.visibility = "visible";
+            math.style.visibility = "hidden";
+            vari.style.visibility = "hidden";
+        }
+        function turnMathc()
+        {
+            basic.style.visibility = "hidden";
+            ifelse.style.visibility = "hidden";
+            loop.style.visibility = "hidden";
+            math.style.visibility = "visible";
+            vari.style.visibility = "hidden";
+        }
+        function turnVar()
+        {
+            basic.style.visibility = "hidden";
+            ifelse.style.visibility = "hidden";
+            loop.style.visibility = "hidden";
+            math.style.visibility = "hidden";
+            vari.style.visibility = "visible";
+        }
+        function hideAll()
+        {
+            basic.style.visibility = "hidden";
+            ifelse.style.visibility = "hidden";
+            loop.style.visibility = "hidden";
+            math.style.visibility = "hidden";
+            vari.style.visibility = "hidden";
+        }
+    </script>
+</html> 

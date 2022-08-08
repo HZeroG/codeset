@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="forhover.css">
+    <script src="https://unpkg.com/phosphor-icons"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="trans.js"></script>
+</head>
+<body style="background: rgb(0, 135, 255);
+    background: -webkit-linear-gradient(to right, rgb(255, 120, 165), #d6a3ef, rgb(0, 135, 255));
+    background: linear-gradient(to right, rgb(255, 120, 165), #d6a3ef, rgb(0, 135, 255)); ">
+    
+    <div class="topbar" style="display:flex; align-items: center; justify-content: space-around; margin: 10px 50px 10px 200px;" >
+        <div class="borderbot" style="padding: 5px 10px; margin: 5px 10px; background-color: transparent; color: black; font-size: 20px; ">Bắt đầu</div>
+        <div class="borderbot" style="padding: 5px 10px; margin: 5px 10px; background-color: transparent; color: black; font-size: 20px; ">Cá nhân</div>
+        <div class="borderbot" style="padding: 5px 10px; margin: 5px 10px; background-color: transparent; color: black; font-size: 20px; ">Liên hệ</div>
+        <div class="borderbot" style="padding: 5px 10px; margin: 5px 10px; background-color: transparent; color: black; font-size: 20px; ">Về chúng tôi</div>
+        <p style="margin: 0px 50px;"></p>
+        <div class="borderbot" style="padding: 5px 10px; margin: 5px 10px; background-color: transparent; color: black; font-size: 20px; ">Tiếng việt</div>
+        <div  class="borderbot" >
+            <button onClick="DEL_SignUp()" style="border: none; padding: 5px 10px; margin: 5px 10px; background-color: transparent; color: black; font-size: 20px;">Đăng nhập</button>
+        </div>
+        <div class="borderbot">
+            <button onClick="DEL_SignIn()" style="border: none; padding: 5px 10px; margin: 5px 10px; background-color: transparent; color: black; font-size: 20px; ">Đăng kí</button>
+        </div>
+    </div>
+    <div class="bottom" style="display: flex;">
+        <div class="bottom-left" style="width: 60vw; height: 90vh; display: flex; flex-direction: column; align-items: center; padding: 150px 150px;">
+            <h1 style="font-size: 50px; font-weight: 600;  ">Đăng nhập để tham gia <span style="font-weight: 600; font-size: 50px; background-color: rgba(255, 0, 0, 0.5);">cộng đồng</span> nhiệt huyết và thân thiên !</h1>
+            <h2 style="font-size: 30px; margin: 50px 0px;">Codeset - Học tư duy lập trình một cách đơn giản hơn</h2>
+        </div>
+        <div style="display: flex; flex-direction: column; align-items: center; margin-top: 50px;">
+            <i style="font-size: 30px;" class="ph-codepen-logo-bold"></i>
+            <p style=" font-weight: 500;">C</p>
+            <p style=" font-weight: 500;">O</p>
+            <p style=" font-weight: 500;">D</p>
+            <p style=" font-weight: 500;">E</p>
+            <p style=" font-weight: 500;">S</p>
+            <p style=" font-weight: 500;">E</p>
+            <p style=" font-weight: 500;">T</p>
+        </div>
+        <div class="bottom-right" style="width: 40vw; height: 90vh; display: flex; flex-direction: column; align-items: center; margin-top: 100px;">
+            <div id="signIn" class="signin" style="display: flex; flex-direction: column; align-items: center;" >
+                <input id = "email-sign-in" style="border: none; font-size: 15px; padding: 15px; margin: 15px 0px; width: 20vw; border-radius: 15px; box-shadow: rgba(50, 50, 50, 0.3) 5px 5px 15px 5px;"  type="email" placeholder="Nhập email">
+                <input id = "pwd-sign-in" style="border: none; font-size: 15px; padding: 15px; margin: 15px 0px; width: 20vw; border-radius: 15px; box-shadow: rgba(50, 50, 50, 0.3) 5px 5px 15px 5px;"  type="password" placeholder="Nhập mật khẩu">
+                <h2 style="font-size: 10px; align-self: flex-end;">Quên mật khẩu ?</h2>
+                <a href="dashboard.html"><div class="glass" style="color: black; padding: 15px; margin: 15px 0px; width: 20vw; border-radius: 15px; margin: 50px 0px 20px 0px; display: flex; align-items: center; justify-content: center;">
+                    <button id="signin_btn" style="font-size: 15px;  font-weight: 800; background-color: transparent; border: none;">Đăng nhập</button>
+                </div></a>
+                <h2 style="font-size: 15px;">Hoặc đăng nhập với</h2>
+                <div style="display: flex; justify-content: space-around; width: 100%;">
+                    <div class="glass" style="font-size: 15px; padding: 15px; margin: 15px; width: 3vw; height: 3vw; border-radius: 15px; font-weight: 800; margin: 50px 0px 20px 0px; display: flex; align-items: center; justify-content: center;"><i style="font-size: 20px;" class="ph-facebook-logo-bold"></i></div>
+                    <div class="glass" style="font-size: 15px; padding: 15px; margin: 15px; width: 3vw; height: 3vw; border-radius: 15px; font-weight: 800; margin: 50px 0px 20px 0px; display: flex; align-items: center; justify-content: center;"><i style="font-size: 20px;" class="ph-google-logo-bold"></i></div>
+                    <div class="glass" style="font-size: 15px; padding: 15px; margin: 15px; width: 3vw; height: 3vw; border-radius: 15px; font-weight: 800; margin: 50px 0px 20px 0px; display: flex; align-items: center; justify-content: center;"><i style="font-size: 20px;" class="ph-instagram-logo-bold"></i></div>
+                </div>
+            </div>
+            <div id="signUp" class="signin" style="display: flex; flex-direction: column; align-items: center;position: absolute; visibility: hidden;">
+                <input id="email-sign-up" style="border: none; font-size: 15px; padding: 15px; margin: 15px 0px; width: 20vw; border-radius: 15px; box-shadow: rgba(50, 50, 50, 0.3) 5px 5px 15px 5px;"  type="email" placeholder="Nhập email">
+                <input id="pwd-sign-up" style="border: none; font-size: 15px; padding: 15px; margin: 15px 0px; width: 20vw; border-radius: 15px; box-shadow: rgba(50, 50, 50, 0.3) 5px 5px 15px 5px;"  type="password" placeholder="Nhập mật khẩu">
+                <input id="pwd-sign-up-re-type" style="border: none; font-size: 15px; padding: 15px; margin: 15px 0px; width: 20vw; border-radius: 15px; box-shadow: rgba(50, 50, 50, 0.3) 5px 5px 15px 5px;"  type="password" placeholder="Nhập lại mật khẩu">
+                <input id="full-name-sign-up" style="border: none; font-size: 15px; padding: 15px; margin: 15px 0px; width: 20vw; border-radius: 15px; box-shadow: rgba(50, 50, 50, 0.3) 5px 5px 15px 5px;"  type="name" placeholder="Họ tên">
+                <h2 style="font-size: 10px; align-self: flex-end;">Quên mật khẩu ?</h2>
+                <a href="dashboard.html"><div class="glass" style="color: black; padding: 15px; margin: 15px 0px; width: 20vw; border-radius: 15px; margin: 50px 0px 20px 0px; display: flex; align-items: center; justify-content: center;">
+                    <button id="signup_btn" style="font-size: 15px;  font-weight: 800; background-color: transparent; border: none;">Đăng kí</button>
+                </div></a>
+                <h2 style="font-size: 15px;">Hoặc đăng nhập với</h2>
+                <div style="display: flex; justify-content: space-around; width: 100%;">
+                    <div class="glass" style="font-size: 15px; padding: 15px; margin: 15px; width: 3vw; height: 3vw; border-radius: 15px; font-weight: 800; margin: 50px 0px 20px 0px; display: flex; align-items: center; justify-content: center;"><i style="font-size: 20px;" class="ph-facebook-logo-bold"></i></div>
+                    <div class="glass" style="font-size: 15px; padding: 15px; margin: 15px; width: 3vw; height: 3vw; border-radius: 15px; font-weight: 800; margin: 50px 0px 20px 0px; display: flex; align-items: center; justify-content: center;"><i style="font-size: 20px;" class="ph-google-logo-bold"></i></div>
+                    <div class="glass" style="font-size: 15px; padding: 15px; margin: 15px; width: 3vw; height: 3vw; border-radius: 15px; font-weight: 800; margin: 50px 0px 20px 0px; display: flex; align-items: center; justify-content: center;"><i style="font-size: 20px;" class="ph-instagram-logo-bold"></i></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.1/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.9.1/firebase-analytics.js";
+        import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.9.1/firebase-auth.js";
+        import { getDatabase,set,ref,update } from "https://www.gstatic.com/firebasejs/9.9.1/firebase-database.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+        apiKey: "AIzaSyAmiHNk2ph1FRx7npO67wLfEXKHaAAkdM4",
+        authDomain: "codeset-coding.firebaseapp.com",
+        databaseURL: "https://codeset-coding-default-rtdb.firebaseio.com",
+        projectId: "codeset-coding",
+        storageBucket: "codeset-coding.appspot.com",
+        messagingSenderId: "566306100663",
+        appId: "1:566306100663:web:3d392bcf364c9dd01dc432",
+        measurementId: "G-GWL33R5VL9"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+        const auth = getAuth();
+        const database = getDatabase(app);
+
+        signup_btn.addEventListener('click',(e) => {
+        var name = document.getElementById('full-name-sign-up').value;
+        var email = document.getElementById('email-sign-up').value;
+        var password = document.getElementById('pwd-sign-up').value; 
+            createUserWithEmailAndPassword(auth, email, password)
+                .then((userCredential) => {
+                // Signed in 
+                const user = userCredential.user;
+                set(ref(database, 'users/' + user.uid), {
+                    username: name,
+                    email: email,
+                    password: password
+                })
+                .then(() => {
+                    // Data saved successfully!
+                    alert('Lưu thành công')
+            })
+                .catch((error) => {
+                    // The write failed...
+                    alert(error)
+            });
+            })
+                .catch((error) => {
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                // ..
+                alert(errorMessage);
+            });
+        })
+
+        signin_btn.addEventListener('click',(e) => {
+            var email = document.getElementById('email-sign-in').value;
+            var password = document.getElementById('pwd-sign-in').value; 
+            signInWithEmailAndPassword(auth, email, password)
+                .then((userCredential) => {
+                // Signed in 
+                const user = userCredential.user;
+                var lgDate = new Date();
+                update(ref(database, 'users/' + user.uid), {
+                    last_login: lgDate
+                })
+                .then(() => {
+                    // Data saved successfully!
+                    alert('Đăng nhập thành công')
+            })
+                .catch((error) => {
+                    // The write failed...
+                    alert(error)
+            });
+            })
+                .catch((error) => {
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                // ..
+                alert(errorMessage);
+            });
+        })
+      </script> 
+    <script src="trans.js"></script>
+</body>
+</html>

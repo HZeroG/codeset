@@ -1,0 +1,30 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    cursor: url(assets/img/cat.png), auto;
+    text-decoration: none;
+
+}
+*::-webkit-scrollbar
+{
+    display: none;    
+}
+.glass
+{
+    background: rgba(255, 255, 255, 0.16);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(9.3px);
+    -webkit-backdrop-filter: blur(9.3px);
+    border: 1px solid rgba(255, 255, 255, 0.28);
+}
+.fordrag
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

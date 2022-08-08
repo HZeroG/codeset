@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="forhover.css">
+    <link rel="stylesheet" href="fontcourses.css">
+    <script src="https://unpkg.com/phosphor-icons"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body style="display: flex; justify-content: space-between; background-color: rgb(241, 241, 241);" >
+    <div class="leftbar" style="display: flex; flex-direction: column; width: 18vw; height: 100vh; box-shadow:  rgba(200, 200, 200, 0.575) 0px 10px 30px 0px; background-color: white; position: fixed;"  >
+        <div style="display: flex; align-items: center; justify-content: center;">
+            <i style="font-size: 40px; margin-right: 5px;" class="ph-code-bold"></i>
+            <h1 style="font-size: 20px; font-weight: 600; text-align: center; margin: 20px 0px;">CODESET</h1>
+        </div>
+        <a href="dashboard.html"><div style="display: flex; align-items: center; background-color: white; border-top: 1px solid rgb(222, 222, 222); color: black;">
+            <i style="font-size: 25px;padding: 5px 5px; margin: 0px 10px 0px 0px;" class="ph-circles-four-bold"></i>
+            <h2 style="font-size: 15px; font-weight: 600;">Trang chủ</h2>
+        </div></a>
+        <a href="profile.html"><div style="display: flex; align-items: center; background-color: white; border-top: 1px solid rgb(222, 222, 222); color: black;">
+            <i style="font-size: 25px;padding: 5px 5px; margin: 0px 10px 0px 0px;" class="ph-user-bold"></i>
+            <h2 style="font-size: 15px; font-weight: 600;">Hồ sơ</h2>
+        </div></a>
+        <a href="courses.html"><div style="display: flex; align-items: center; background-color: white; border-top: 1px solid rgb(222, 222, 222); color: black; background-color: rgb(251, 180, 84); color: white;">
+            <i style="font-size: 25px;padding: 5px 5px; margin: 0px 10px 0px 0px;" class="ph-bookmark-bold"></i>
+            <h2 style="font-size: 15px; font-weight: 600;">Khóa học</h2>
+        </div></a>
+        <a href="progress.html"><div style="display: flex; align-items: center; background-color: white; border-top: 1px solid rgb(222, 222, 222); color: black;;">
+            <i style="font-size: 25px;padding: 5px 5px; margin: 0px 10px 0px 0px;" class="ph-chart-bar-bold"></i>
+            <h2 style="font-size: 15px; font-weight: 600;">Tiến trình</h2>
+        </div></a>
+        <a href="forum.html"><div style="display: flex; align-items: center; background-color: white; border-top: 1px solid rgb(222, 222, 222); color: black;;">
+            <i style="font-size: 25px;padding: 5px 5px; margin: 0px 10px 0px 0px;" class="ph-airplay-bold"></i>
+            <h2 style="font-size: 15px; font-weight: 600;">Diễn đàn</h2>
+        </div></a>
+        <a href="message.html"><div style="display: flex; align-items: center; background-color: white; border-top: 1px solid rgb(222, 222, 222); color: black;border-bottom: 1px solid rgb(222, 222, 222);">
+            <i style="font-size: 25px;padding: 5px 5px; margin: 0px 10px 0px 0px;" class="ph-chats-bold"></i>
+            <h2 style="font-size: 15px; font-weight: 600;">Nhắn tin</h2>
+        </div></a>
+        <div style="display: flex; align-items: center; height: 100%;">
+            <div style="display: flex; flex-direction: column; align-items: center; border: 2px solid rgb(225, 225, 225); border-radius: 15px; margin: 20px 30px; justify-content: center; position: relative; height: fit-content;">
+                <i style="padding: 10px; font-size: 40px; background-color: rgba(251, 180, 84, 0.6); position: absolute; border-radius: 10px; top: -20%;" class="ph-users-three-bold"></i>
+                <span style="font-size: 20px; font-weight: 600; text-align: center; margin: 50px 40px 0px 40px;" >Nền tảng mạng xã hội</span>
+                <span style="font-size: 10px; text-align: center; margin: 30px;">Trở thành một thành viên của cộng đồng <strong style="font-weight: 600;">Codeset</strong> và trải nghiệm</span>
+            </div>
+        </div>
+        <a href="index.html"><div style="display: flex; align-items: center; background-color: white;position: absolute; bottom: 0; color: black;">
+            <i style="font-size: 25px;padding: 5px 5px; margin: 0px 10px 0px 0px;" class="ph-sign-out-bold"></i>
+            <h2 style="font-size: 15px; font-weight: 600;">Đăng xuất</h2>
+        </div></a>
+    </div>
+    <div style="display: flex; flex-direction: column;">
+        <div style="display: flex; flex-direction: row; align-items: center; width: 80vw; height: 10vh;  justify-content: space-around; position: fixed; right: 1vw;">
+            <div style="display: flex; align-items: center; background-color: white; border-radius: 10px; width: 30vw; padding: 5px 10px; margin: 5px 10px; margin-left: 10px; box-shadow: rgba(100, 100, 100, 0.3) 0px 3px 9px 0px; ">
+                <i style="font-size: 25px; margin-right: 10px;" class="ph-magnifying-glass"></i>
+                <input style="font-size: 15px; padding: 5px 10px; color: rgb(200, 200, 200); width: 100%; border: none; outline: none;" placeholder="Tìm kiếm">
+            </div>
+            <a href="blocksketch.html"><div style="background-color: white; padding: 10px 15px; border-radius: 15px; background-color: rgb(251, 180, 84); color: white; margin: 5px 10px; margin-right: 20px; box-shadow: rgba(100, 100, 100, 0.3) 0px 3px 9px 0px; display: flex; align-items: center;">
+                <i style="font-size: 15px; margin-right: 5px ;" class="ph-cube-bold"></i>
+                <h2 style="font-size: 15px; font-weight: 600;">Block sketch</h2>
+            </div></a>
+            <i style="font-size: 18px; background-color: white; border-radius: 15px; padding: 10px; margin: 5px 10px; box-shadow: rgba(100, 100, 100, 0.3) 0px 3px 9px 0px;" class="ph-chat-circle"></i>
+            <i style="font-size: 18px; background-color: white; border-radius: 15px; padding: 10px; margin: 5px 10px; box-shadow: rgba(100, 100, 100, 0.3) 0px 3px 9px 0px;" class="ph-airplay"></i>
+            <i style="font-size: 18px; background-color: white; border-radius: 15px; padding: 10px; margin: 5px 10px; box-shadow: rgba(100, 100, 100, 0.3) 0px 3px 9px 0px;" class="ph-bell-ringing"></i>
+            <div style=" display: flex; justify-content: center; align-items: center; padding: 7px; border-radius: 15px; background-color: white; margin: 5px 10px; box-shadow: rgba(100, 100, 100, 0.3) 0px 3px 9px 0px;">
+                <div style="width: 25px; height: 25px; background-color: rgb(0, 135, 255); border-radius: 500px;">
+                    <img src="assets/img/user.svg" alt="" height="100%" width="100%" style="border-radius: 500px; border: 1px solid rgb(0, 135, 255);">
+                </div>
+                <h2 style="font-size: 15px; font-weight: 600; padding: 5px; ">HZeroG</h2>
+            </div>
+            <div style="width: 17%; background-color: white; border-radius: 15px; padding: 12px; box-shadow: rgba(100, 100, 100, 0.3) 0px 3px 9px 0px; margin: 5px 0px;">
+                <h2 style="font-size: 15px; font-weight: 600; text-align: center;">Fri, 28 - 7 - 2022</h2>
+            </div>
+        </div>
+        <div style="width: 80vw; height: 10vh;"></div>
+        <div style="display: flex; align-items: center;">
+            <div style="width: 47vw; height: 90vh; margin-top: 20px; margin-left: 35vw; display: flex;">
+                <div style="display: flex; flex-direction: column; padding: 20px 10px; margin: 0px 10px; height: 50vh; justify-content: space-around; align-items: center; position: fixed; left: 30vw; top: 20vh;">
+                    <div style="display: flex; flex-direction: column; height: 50%; justify-content: space-between;  background-color: white; border-radius: 15px; padding: 20px 10px; align-items: center;">
+                        <button style="border: none; font-size: 18px; background-color: transparent;" onclick="changePageUp()"><i class="ph-caret-up-bold"></i></button>
+                        <h2 style="font-size: 20px;">1</h2>
+                        <button style="border: none; font-size: 18px; background-color: transparent;" onclick="changePageDown()"><i class="ph-caret-down-bold"></i></button>
+                    </div>
+                    <button style="border: none; font-size: 18px; background-color: transparent;"><i class="ph-bookmark-simple-bold"></i></button>
+                    <button style="border: none; font-size: 18px; background-color: transparent;"><i class="ph-share-network-bold"></i></button>
+                    <button style="border: none; font-size: 18px; background-color: transparent;"><i class="ph-info-bold"></i></button>
+                </div>
+                <a href="blocksketch.html"><button style="position: fixed; z-index: 1; bottom: 3vh; left: 68vw; border: none; background-color: rgb(251, 180, 84); font-size: 20px; padding: 10px 20px; font-weight: 600; color: white; border-radius: 15px; box-shadow: rgba(100, 100, 100, 0.4) 3px 3px 10px 3px"> + Thực hành</button></a>
+                <div style="background-color: white; height: fit-content; padding: 10px 20px; border-radius: 15px; position: fixed; width: 45vw; height: 82vh;">
+                    <h1 style="font-weight: 700; text-align: center;">HỌC VỀ ALGORITHM - THUẬT TOÁN</h1>
+                    <div class="forline" id="page1" style="position: absolute; ">
+                        <h6>I. Tìm hiểu về thuật toán</h6>
+                        <h2>1. Thuật toán</h2>
+                        <h4> - Thuật toán là một dãy hữu hạn các bước, mỗi bước mô tả chính xác các phép toán hoặc hành động cần thực hiện để giải quyết một vấn đề. Hiểu đơn giản thuật toán là cách để giải 1 bài toán.</h4>
+                        <h4> - Các đặc trưng của 1  thuật toán :</h4> 
+                        <p> + <strong style="font-weight: 600;">Có đầu vào (Input): </strong>Thuật toán nhận dữ liệu từ 1 nguồn.</p>
+                        <p> + <strong style="font-weight: 600;">Có đầu ra (Output): </strong>Sau khi nhận dữ liệu, thuật toán sẽ tính toán và đưa ra kết quả tương ứng với đầu vào đó.</p>
+                        <p> + <strong style="font-weight: 600;">Tính chính xác: </strong>Các bước của thuật toán được mô tả chính xác.</p>   
+                        <p> + <strong style="font-weight: 600;">Tính hữu hạn: </strong>Thuật toán cần phải đưa ra được output sau một số hữu hạn các bước với mọi input.</p>   
+                        <p> + <strong style="font-weight: 600;">Tính đơn trị: </strong>Các kết quả trung gian của từng bước thực hiện thuật toán được xác định một cách đơn trị và chỉ phụ thuộc và input và kết quả của các bước trước.</p>
+                        <p> + <strong style="font-weight: 600;">Tính tổng quát: </strong>Thuật toán có thể áp dụng để giải mọi bài toán có cùng dạng với bài toán đã giải.</p>
+                    </div>
+
+                    <div class="forline" id="page2" style="position: absolute; visibility: hidden;">
+                        <h2>2. Mục đích</h2>
+                        <h4> - Tại sao chúng ta lại cần đến thuật toán ?. Như đã nói ở trên chúng ta sử dụng thuật toán để giải quyết 1 vấn đề nào đó. Khi am hiểu về thuật toán, chúng ta có thể giải quyết các vấn đề 1 cách chính xác và nhanh chóng hơn, tiết kiệm thời gian và tăng tính hiệu quả cho công việc</h4>
+             
+                        <h2>3. Độ phức tạp của thuật toán</h2>
+                        <h4> - Là 1 khái niệm/định nghĩa/định lượng tương đối thể hiện số phép toán của giải thuật so với kích thước của đầu vào. 1 thuật toán có độ phức tạp nhỏ thì tương đương với việc thời gian chạy cũng rút ngắn lại. Việc xem xét độ phức tạp của thuật toán rất quan trọng. Một số bài toán phức tạp có độ phức tạp lớn, có thể mất rất nhiều thời gian để xử lý.</h4>
+                    </div>
+
+                    <div class="forline" id="page3" style="position: absolute; visibility: hidden;">
+                        <h2>4. Các cách để biểu diễn 1 thuật toán</h2>
+                        <h4> - Lưu đồ thuật toán: </h4>
+                        <h5> + Là công cụ dùng để biểu diễn thuật toán, mô tả nhập (input), dữ liệu xuất (output) và luồng xữ lý thông qua các ký hiệu hình học. Công cụ này rất thích hợp để bạn học cách tư duy phân tích bài toán.</h3>
+                        <h3>VD: </h3>
+                        <img src="assets/img/hocalgorithm1.jpg" alt="" height="300px" width="300px" style="align-self: center;">
+                    </div>
+
+                    <div class="forline" id="page4" style="position: absolute; visibility: hidden;">
+                        <h4> - Mã giả: </h4>
+                        <h5> + Là một bản mô tả giải thuật lập trình máy tính ngắn gọn và không chính thức cấp cao, trong đó sử dụng những quy ước có cấu trúc của một số ngôn ngữ lập trình, nhưng thường bỏ đi những chi tiết không cần thiết để giúp hiểu rõ giải thuật hơn, như bỏ đi chương trình con, khai báo biến và những đoạn mã đặc biệt của hệ thống.</h5>
+                        <h3>VD: </h3>
+                        <p>if Delta > 0 then</p>
+                        <p>begin</p>
+                        <p style="margin-left: 20px;">x1=(-b-sqrt(delta))/(2*a)</p>
+                        <p style="margin-left: 20px;">x2=(-b+sqrt(delta))/(2*a)</p>
+                        <p style="margin-left: 20px;">xuất kết quả : phương trình có hai nghiệm là x1 và x2</p>
+                        <p>end</p>
+                        <p>else</p>
+                        <p>if delta = 0 then</p>
+                        <p style="margin-left: 20px;">xuất kết quả : phương trình có nghiệm kép là -b/(2*a)</p>
+                        <p>else {trường hợp delta < 0 }</p>
+                        <p style="margin-left: 20px;">xuất kết quả : phương trình vô nghiệm</p>
+                    </div>
+
+                    <div class="forline" id="page5" style="position: absolute; visibility: hidden;">
+                        <h6>II. Ví dụ về 1 số thuật toán thông dụng</h6>
+                        <h2>1. Thuật toán tìm kiếm nhị phân</h2>
+                        <h4> - <strong style="font-weight: 600;">Bài toán: </strong>Giả sử, có mảng a[0], a[1], a[2], .., a[n]-1 đã được sắp xếp theo thứ tự tăng dần. Các phần tử trong dãy có mối quan hệ: a[i]-1 ≤ a[i] ≤ a[i]+1. Cho giá trị x. Tìm xem giá trị x có trong mảng hay không</h4>
+                        <h4> - <strong style="font-weight: 600;">Ý tưởng: </strong></h4>
+                        <h5> + Nếu x > a[i] thì x chỉ có thể xuất hiện trong đoạn [a[i]+1; a[n]-1].</h5>
+                        <h5> + Nếu x < a[i] thì x chỉ có thể xuất hiện trong đoạn [a[0]; a[i]-1].</h5>
+                        <h5> + Tại mỗi bước, ta so sánh x với phần tử đứng giữa trong mảng đang tìm kiếm, dựa vào kết quả so sánh này mà ta quyết định giới hạn dãy tìm kiếm ở nữa dưới hay nữa trên của dãy tìm kiếm hiện hành.</h5>
+                    </div>
+
+                    <div class="forline" id="page6" style="position: absolute; visibility: hidden;">
+                        <h4> - Các bước thực hiện thuật toán :</h4>
+                        <h5> + Giả sử mảng tìm kiếm hiện hành bao gồm các phần tử nằm trong aleft, aright. Các bước của giải thuật như sau:</h5>
+                        <p>Bước 1: Gán left=0; right=n-1;</p>
+                        <p>Bước 2:</p>
+                        <p>mid=(left+right)/2;//chỉ số phần tử giữa mảng hiện hành</p>
+                        <p>So sánh a[mid] với x. Có 3 khả năng:</p>
+                        <p>a[mid] == x -> tìm thấy -> Dừng.</p>
+                        <p>a[mid] > x thì gán right=mid-1;//tìm tiếp x trong mảng con a[left],..,a[mid-1]</p>
+                        <p>a[mid] < x thì gán left=mid+1;//tìm tiếp x trong mảng con a[mid+1],..,a[right]</p>
+                        <p>Bước 3: Nếu left <= right; thì lặp lại bước 2. Ngược lại thì dừng.</p>
+                    </div>
+
+                    <div class="forline" id="page7" style="position: absolute; visibility: hidden;">
+                        <h5> + Minh hoạ thuật toán</h5>
+                        <p>Tìm x=4 trong mảng đã được sắp xếp tăng dần bên dưới.</p>
+                        <img src="assets/img/hocalgorithm2.jpg" alt="" width="80%" style="align-self: center;">
+                        <p>Xác định left=0 và right=6 trên mảng đang xét.</p>
+                        <img src="assets/img/hocalgorithm3.jpg" alt="" width="80%" style="align-self: center;">
+                    </div>
+
+                    <div class="forline" id="page8" style="position: absolute; visibility: hidden;">
+                        <p>Xác định được mid=(left+right)/2=3 trong mảng đang xét và a[mid]=6.</p>
+                        <img src="assets/img/hocalgorithm4.jpg" alt="" width="80%" style="align-self: center;">
+                        <p>Giá trị x=4 nhỏ hơn a[mid]=6 nên right=mid-1=2, left vẫn là 0. Mảng con đang xét hiện giờ là a[left],…,a[right].</p>
+                        <img src="assets/img/hocalgorithm5.jpg" alt="" width="80%" style="align-self: center;">
+                    </div>
+
+                    <div class="forline" id="page9" style="position: absolute; visibility: hidden;">
+                        <p>Xác định lại mid=(left+right)/2=1 và a[mid]=4.</p>
+                        <img src="assets/img/hocalgorithm6.jpg" alt="" width="20%" style="align-self: center;">
+                        <p>Tìm được x=4 trong mảng con.</p>
+                        <img src="assets/img/hocalgorithm7.jpg" alt="" width="20%" style="align-self: center;">
+                        <p> + Đánh giá thuật toán </p>
+                        <img src="assets/img/hocalgorithm8.JPG" alt="" width="100%">
+                        <p>Độ phức tạp của thuật toán là O(log2ns).</p>
+                    </div>
+                </div>
+            </div>
+        </div>        
+    </div>
+    <script>
+        var page = 1;
+        function changePageDown()
+        {
+            page++;
+            if(page == 1)
+            {
+                var pages1 = document.getElementById("page1");
+                pages1.style.visibility = "visible";
+                pages1.className = "anipage";
+                var pages2 = document.getElementById("page2");
+                pages2.style.visibility = "hidden";
+                var pages3 = document.getElementById("page3");
+                pages3.style.visibility = "hidden";
+                var pages4 = document.getElementById("page4");
+                pages4.style.visibility = "hidden";
+                var pages5 = document.getElementById("page5");
+                pages5.style.visibility = "hidden";
+                var pages6 = document.getElementById("page6");
+                pages6.style.visibility = "hidden";
+                var pages7 = document.getElementById("page7");
+                pages7.style.visibility = "hidden";
+                var pages8 = document.getElementById("page8");
+                pages8.style.visibility = "hidden";
+                var pages9 = document.getElementById("page9");
+                pages9.style.visibility = "hidden";
+            }
+            if(page == 2)
+            {
+                var pages1 = document.getElementById("page1");
+                pages1.style.visibility = "hidden";
+                var pages2 = document.getElementById("page2");
+                pages2.style.visibility = "visible";
+                var pages3 = document.getElementById("page3");
+                pages3.style.visibility = "hidden";
+                var pages4 = document.getElementById("page4");
+                pages4.style.visibility = "hidden";
+                var pages5 = document.getElementById("page5");
+                pages5.style.visibility = "hidden";
+                var pages6 = document.getElementById("page6");
+                pages6.style.visibility = "hidden";
+                var pages7 = document.getElementById("page7");
+                pages7.style.visibility = "hidden";
+                var pages8 = document.getElementById("page8");
+                pages8.style.visibility = "hidden";
+                var pages9 = document.getElementById("page9");
+                pages9.style.visibility = "hidden";
+            }
+            if(page == 3)
+            {
+                var pages1 = document.getElementById("page1");
+                pages1.style.visibility = "hidden";
+                var pages2 = document.getElementById("page2");
+                pages2.style.visibility = "hidden";
+                var pages3 = document.getElementById("page3");
+                pages3.style.visibility = "visible";
+                var pages4 = document.getElementById("page4");
+                pages4.style.visibility = "hidden";
+                var pages5 = document.getElementById("page5");
+                pages5.style.visibility = "hidden";
+                var pages6 = document.getElementById("page6");
+                pages6.style.visibility = "hidden";
+                var pages7 = document.getElementById("page7");
+                pages7.style.visibility = "hidden";
+                var pages8 = document.getElementById("page8");
+                pages8.style.visibility = "hidden";
+                var pages9 = document.getElementById("page9");
+                pages9.style.visibility = "hidden";
+            }
+            if(page == 4)
+            {
+                var pages1 = document.getElementById("page1");
+                pages1.style.visibility = "hidden";
+                var pages2 = document.getElementById("page2");
+                pages2.style.visibility = "hidden";
+                var pages3 = document.getElementById("page3");
+                pages3.style.visibility = "hidden";
+                var pages4 = document.getElementById("page4");
+                pages4.style.visibility = "visible";
+                var pages5 = document.getElementById("page5");
+                pages5.style.visibility = "hidden";
+                var pages6 = document.getElementById("page6");
+                pages6.style.visibility = "hidden";
+                var pages7 = document.getElementById("page7");
+                pages7.style.visibility = "hidden";
+                var pages8 = document.getElementById("page8");
+                pages8.style.visibility = "hidden";
+                var pages9 = document.getElementById("page9");
+                pages9.style.visibility = "hidden";
+            }
+            if(page == 5)
+            {
+                var pages1 = document.getElementById("page1");
+                pages1.style.visibility = "hidden";
+                var pages2 = document.getElementById("page2");
+                pages2.style.visibility = "hidden";
+                var pages3 = document.getElementById("page3");
+                pages3.style.visibility = "hidden";
+                var pages4 = document.getElementById("page4");
+                pages4.style.visibility = "hidden";
+                var pages5 = document.getElementById("page5");
+                pages5.style.visibility = "visible";
+                var pages6 = document.getElementById("page6");
+                pages6.style.visibility = "hidden";
+                var pages7 = document.getElementById("page7");
+                pages7.style.visibility = "hidden";
+                var pages8 = document.getElementById("page8");
+                pages8.style.visibility = "hidden";
+                var pages9 = document.getElementById("page9");
+                pages9.style.visibility = "hidden";
+            }
+            if(page == 6)
+            {
+                var pages1 = document.getElementById("page1");
+                pages1.style.visibility = "hidden";
+                var pages2 = document.getElementById("page2");
+                pages2.style.visibility = "hidden";
+                var pages3 = document.getElementById("page3");
+                pages3.style.visibility = "hidden";
+                var pages4 = document.getElementById("page4");
+                pages4.style.visibility = "hidden";
+                var pages5 = document.getElementById("page5");
+                pages5.style.visibility = "hidden";
+                var pages6 = document.getElementById("page6");
+                pages6.style.visibility = "visible";
+                var pages7 = document.getElementById("page7");
+                pages7.style.visibility = "hidden";
+                var pages8 = document.getElementById("page8");
+                pages8.style.visibility = "hidden";
+                var pages9 = document.getElementById("page9");
+                pages9.style.visibility = "hidden";
+            }
+            if(page == 7)
+            {
+                var pages1 = document.getElementById("page1");
+                pages1.style.visibility = "hidden";
+                var pages2 = document.getElementById("page2");
+                pages2.style.visibility = "hidden";
+                var pages3 = document.getElementById("page3");
+                pages3.style.visibility = "hidden";
+                var pages4 = document.getElementById("page4");
+                pages4.style.visibility = "hidden";
+                var pages5 = document.getElementById("page5");
+                pages5.style.visibility = "hidden";
+                var pages6 = document.getElementById("page6");
+                pages6.style.visibility = "hidden";
+                var pages7 = document.getElementById("page7");
+                pages7.style.visibility = "visible";
+                var pages8 = document.getElementById("page8");
+                pages8.style.visibility = "hidden";
+                var pages9 = document.getElementById("page9");
+                pages9.style.visibility = "hidden";
+            }
+            if(page == 8)
+            {
+                var pages1 = document.getElementById("page1");
+                pages1.style.visibility = "hidden";
+                var pages2 = document.getElementById("page2");
+                pages2.style.visibility = "hidden";
+                var pages3 = document.getElementById("page3");
+                pages3.style.visibility = "hidden";
+                var pages4 = document.getElementById("page4");
+                pages4.style.visibility = "hidden";
+                var pages5 = document.getElementById("page5");
+                pages5.style.visibility = "hidden";
+                var pages6 = document.getElementById("page6");
+                pages6.style.visibility = "hidden";
+                var pages7 = document.getElementById("page7");
+                pages7.style.visibility = "hidden";
+                var pages8 = document.getElementById("page8");
+                pages8.style.visibility = "visible";
+                var pages9 = document.getElementById("page9");
+                pages9.style.visibility = "hidden";
+            }
+            if(page == 9)
+            {
+                var pages1 = document.getElementById("page1");
+                pages1.style.visibility = "hidden";
+                var pages2 = document.getElementById("page2");
+                pages2.style.visibility = "hidden";
+                var pages3 = document.getElementById("page3");
+                pages3.style.visibility = "hidden";
+                var pages4 = document.getElementById("page4");
+                pages4.style.visibility = "hidden";
+                var pages5 = document.getElementById("page5");
+                pages5.style.visibility = "hidden";
+                var pages6 = document.getElementById("page6");
+                pages6.style.visibility = "hidden";
+                var pages7 = document.getElementById("page7");
+                pages7.style.visibility = "hidden";
+                var pages8 = document.getElementById("page8");
+                pages8.style.visibility = "hidden";
+                var pages9 = document.getElementById("page9");
+                pages9.style.visibility = "visible";
+            }            
+            if(page > 9)
+            {
+                page = 9;
+            }  
+        }
+        function changePageUp()
+        {
+            page--;
+            if(page == 1)
+            {
+                var pages1 = document.getElementById("page1");
+                pages1.style.visibility = "visible";
+                var pages2 = document.getElementById("page2");
+                pages2.style.visibility = "hidden";
+                var pages3 = document.getElementById("page3");
+                pages3.style.visibility = "hidden";
+                var pages4 = document.getElementById("page4");
+                pages4.style.visibility = "hidden";
+                var pages5 = document.getElementById("page5");
+                pages5.style.visibility = "hidden";
+                var pages6 = document.getElementById("page6");
+                pages6.style.visibility = "hidden";
+                var pages7 = document.getElementById("page7");
+                pages7.style.visibility = "hidden";
+                var pages8 = document.getElementById("page8");
+                pages8.style.visibility = "hidden";
+                var pages9 = document.getElementById("page9");
+                pages9.style.visibility = "hidden";
+            }
+            if(page == 2)
+            {
+                var pages1 = document.getElementById("page1");
+                pages1.style.visibility = "hidden";
+                var pages2 = document.getElementById("page2");
+                pages2.style.visibility = "visible";
+                var pages3 = document.getElementById("page3");
+                pages3.style.visibility = "hidden";
+                var pages4 = document.getElementById("page4");
+                pages4.style.visibility = "hidden";
+                var pages5 = document.getElementById("page5");
+                pages5.style.visibility = "hidden";
+                var pages6 = document.getElementById("page6");
+                pages6.style.visibility = "hidden";
+                var pages7 = document.getElementById("page7");
+                pages7.style.visibility = "hidden";
+                var pages8 = document.getElementById("page8");
+                pages8.style.visibility = "hidden";
+                var pages9 = document.getElementById("page9");
+                pages9.style.visibility = "hidden";
+            }
+            if(page == 3)
+            {
+                var pages1 = document.getElementById("page1");
+                pages1.style.visibility = "hidden";
+                var pages2 = document.getElementById("page2");
+                pages2.style.visibility = "hidden";
+                var pages3 = document.getElementById("page3");
+                pages3.style.visibility = "visible";
+                var pages4 = document.getElementById("page4");
+                pages4.style.visibility = "hidden";
+                var pages5 = document.getElementById("page5");
+                pages5.style.visibility = "hidden";
+                var pages6 = document.getElementById("page6");
+                pages6.style.visibility = "hidden";
+                var pages7 = document.getElementById("page7");
+                pages7.style.visibility = "hidden";
+                var pages8 = document.getElementById("page8");
+                pages8.style.visibility = "hidden";
+                var pages9 = document.getElementById("page9");
+                pages9.style.visibility = "hidden";
+            }
+            if(page == 4)
+            {
+                var pages1 = document.getElementById("page1");
+                pages1.style.visibility = "hidden";
+                var pages2 = document.getElementById("page2");
+                pages2.style.visibility = "hidden";
+                var pages3 = document.getElementById("page3");
+                pages3.style.visibility = "hidden";
+                var pages4 = document.getElementById("page4");
+                pages4.style.visibility = "visible";
+                var pages5 = document.getElementById("page5");
+                pages5.style.visibility = "hidden";
+                var pages6 = document.getElementById("page6");
+                pages6.style.visibility = "hidden";
+                var pages7 = document.getElementById("page7");
+                pages7.style.visibility = "hidden";
+                var pages8 = document.getElementById("page8");
+                pages8.style.visibility = "hidden";
+                var pages9 = document.getElementById("page9");
+                pages9.style.visibility = "hidden";
+            }
+            if(page == 5)
+            {
+                var pages1 = document.getElementById("page1");
+                pages1.style.visibility = "hidden";
+                var pages2 = document.getElementById("page2");
+                pages2.style.visibility = "hidden";
+                var pages3 = document.getElementById("page3");
+                pages3.style.visibility = "hidden";
+                var pages4 = document.getElementById("page4");
+                pages4.style.visibility = "hidden";
+                var pages5 = document.getElementById("page5");
+                pages5.style.visibility = "visible";
+                var pages6 = document.getElementById("page6");
+                pages6.style.visibility = "hidden";
+                var pages7 = document.getElementById("page7");
+                pages7.style.visibility = "hidden";
+                var pages8 = document.getElementById("page8");
+                pages8.style.visibility = "hidden";
+                var pages9 = document.getElementById("page9");
+                pages9.style.visibility = "hidden";
+            }
+            if(page == 6)
+            {
+                var pages1 = document.getElementById("page1");
+                pages1.style.visibility = "hidden";
+                var pages2 = document.getElementById("page2");
+                pages2.style.visibility = "hidden";
+                var pages3 = document.getElementById("page3");
+                pages3.style.visibility = "hidden";
+                var pages4 = document.getElementById("page4");
+                pages4.style.visibility = "hidden";
+                var pages5 = document.getElementById("page5");
+                pages5.style.visibility = "hidden";
+                var pages6 = document.getElementById("page6");
+                pages6.style.visibility = "visible";
+                var pages7 = document.getElementById("page7");
+                pages7.style.visibility = "hidden";
+                var pages8 = document.getElementById("page8");
+                pages8.style.visibility = "hidden";
+                var pages9 = document.getElementById("page9");
+                pages9.style.visibility = "hidden";
+            }
+            if(page == 7)
+            {
+                var pages1 = document.getElementById("page1");
+                pages1.style.visibility = "hidden";
+                var pages2 = document.getElementById("page2");
+                pages2.style.visibility = "hidden";
+                var pages3 = document.getElementById("page3");
+                pages3.style.visibility = "hidden";
+                var pages4 = document.getElementById("page4");
+                pages4.style.visibility = "hidden";
+                var pages5 = document.getElementById("page5");
+                pages5.style.visibility = "hidden";
+                var pages6 = document.getElementById("page6");
+                pages6.style.visibility = "hidden";
+                var pages7 = document.getElementById("page7");
+                pages7.style.visibility = "visible";
+                var pages8 = document.getElementById("page8");
+                pages8.style.visibility = "hidden";
+                var pages9 = document.getElementById("page9");
+                pages9.style.visibility = "hidden";
+            }
+            if(page == 8)
+            {
+                var pages1 = document.getElementById("page1");
+                pages1.style.visibility = "hidden";
+                var pages2 = document.getElementById("page2");
+                pages2.style.visibility = "hidden";
+                var pages3 = document.getElementById("page3");
+                pages3.style.visibility = "hidden";
+                var pages4 = document.getElementById("page4");
+                pages4.style.visibility = "hidden";
+                var pages5 = document.getElementById("page5");
+                pages5.style.visibility = "hidden";
+                var pages6 = document.getElementById("page6");
+                pages6.style.visibility = "hidden";
+                var pages7 = document.getElementById("page7");
+                pages7.style.visibility = "hidden";
+                var pages8 = document.getElementById("page8");
+                pages8.style.visibility = "visible";
+                var pages9 = document.getElementById("page9");
+                pages9.style.visibility = "hidden";
+            }
+            if(page == 9)
+            {
+                var pages1 = document.getElementById("page1");
+                pages1.style.visibility = "hidden";
+                var pages2 = document.getElementById("page2");
+                pages2.style.visibility = "hidden";
+                var pages3 = document.getElementById("page3");
+                pages3.style.visibility = "hidden";
+                var pages4 = document.getElementById("page4");
+                pages4.style.visibility = "hidden";
+                var pages5 = document.getElementById("page5");
+                pages5.style.visibility = "hidden";
+                var pages6 = document.getElementById("page6");
+                pages6.style.visibility = "hidden";
+                var pages7 = document.getElementById("page7");
+                pages7.style.visibility = "hidden";
+                var pages8 = document.getElementById("page8");
+                pages8.style.visibility = "hidden";
+                var pages9 = document.getElementById("page9");
+                pages9.style.visibility = "visible";
+            }          
+            if(page < 1)
+            {
+                page = 1;
+            }  
+        }
+    </script>
+</body>
+</html>
